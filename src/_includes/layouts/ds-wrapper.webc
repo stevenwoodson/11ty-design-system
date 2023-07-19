@@ -1,0 +1,42 @@
+---
+layout: layouts/base.webc
+---
+
+<x slot="head" webc:nokeep>
+  <script
+    type="module"
+    webc:keep
+    :src="url(`/assets/js/vendor/seven-minute-tabs.js?${global.random()}`)"
+    async
+  ></script>
+  <link
+    rel="stylesheet"
+    webc:keep
+    :href="url(`/assets/css/design-system.css?${global.random()}`)"
+  />
+</x>
+
+<div class="ds">
+  <div class="ds__body">
+    <nav class="ds__sidebar ds-flow--xs">
+      <h1 class="ds-title">
+        <a :href="url('/design-system/')">11ty Design System</a>
+      </h1>
+
+      <ul role="list">
+        <li>
+          <strong>Atoms</strong>
+          <ul role="list">
+            <li webc:for="(dsKey, dsItem) in collections.dsAtoms">
+              <a class="ds-link" :href="url(dsItem.url)" @html="dsItem.data.title"></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <ds-menu :@data-items="components.menu"></ds-menu>
+    </nav>
+
+    <main class="ds__main ds-stretch" @raw="content"></main>
+  </div>
+</div>

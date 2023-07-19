@@ -1,0 +1,10 @@
+---
+layout: layouts/base.webc
+---
+
+<main id="main">
+  <div class="flow wrapper" @raw="content"></div>
+</main>
+<footer class="flow wrapper" role="contentinfo">
+  <p><copyright></copyright> Built with <a href="https://11ty.dev/">11ty</a>.</p>
+</footer>

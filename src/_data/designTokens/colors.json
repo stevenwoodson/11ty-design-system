@@ -1,0 +1,86 @@
+{
+  "title": "Colors",
+  "description": "Hex color codes that can be shared, cross-platform. They can be converted at point of usage, such as HSL for web or CMYK for print.",
+  "items": [
+    {
+      "name": "BG",
+      "value": "#ffffff"
+    },
+    {
+      "name": "BG Alt",
+      "value": "#fffaeb"
+    },
+    {
+      "name": "Text",
+      "value": "#1e1719"
+    },
+    {
+      "name": "Grey",
+      "value": "#746969"
+    },
+    {
+      "name": "Grey Light",
+      "value": "#a69d9d"
+    },
+    {
+      "name": "Grey X-Light",
+      "value": "#d7d2d2"
+    },
+    {
+      "name": "Grey Dark",
+      "value": "#3e3939"
+    },
+    {
+      "name": "Grey X-Dark",
+      "value": "#090808"
+    },
+    {
+      "name": "Primary",
+      "value": "#1d6160"
+    },
+    {
+      "name": "Primary Light",
+      "value": "#2f9c9a"
+    },
+    {
+      "name": "Primary Dark",
+      "value": "#0b2626"
+    },
+    {
+      "name": "Secondary",
+      "value": "#ad3f3f"
+    },
+    {
+      "name": "Secondary Light",
+      "value": "#ca6e6e"
+    },
+    {
+      "name": "Secondary Dark",
+      "value": "#752b2b"
+    },
+    {
+      "name": "Alert",
+      "value": "#ab0000"
+    },
+    {
+      "name": "Info",
+      "value": "#000459"
+    },
+    {
+      "name": "Success",
+      "value": "#115832"
+    },
+    {
+      "name": "Warning",
+      "value": "#6b5f13"
+    },
+    {
+      "name": "Code",
+      "value": "#6ce3a3"
+    },
+    {
+      "name": "Focus",
+      "value": "#d700b2"
+    }
+  ]
+}

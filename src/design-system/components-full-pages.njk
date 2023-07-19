@@ -1,0 +1,14 @@
+---
+pagination:
+    data: components.components
+    size: 1
+    alias: component
+permalink: "design-system/components/full/{{ component.slug }}/"
+layout: layouts/base.webc
+---
+<link rel="stylesheet" href="{{ '/assets/css/design-system.css?' + global.random() | url }}" />
+
+<div class="flow {{ component.preview }}">
+  {% set params = component.context %}
+  {% include "components/" + component.path + "/" + component.name + ".njk" ignore missing %}
+</div>

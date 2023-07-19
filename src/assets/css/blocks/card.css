@@ -1,0 +1,46 @@
+.card {
+  --img-ratio: 3/2;
+
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card > img {
+  aspect-ratio: var(--img-ratio);
+  object-fit: cover;
+  width: 100%;
+}
+
+.card > img:first-child {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.card > img:last-child {
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  margin-top: auto;
+}
+
+.card > :not(img) {
+  margin-left: var(--space-s);
+  margin-right: var(--space-s);
+}
+
+.card > :not(img):first-child {
+  margin-top: var(--space-s);
+}
+
+/* Enhanced `:not()` accepts a selector list,
+but as a fallback you can chain `:not()` instead */
+.card > :last-of-type:not(img, h2, h3, h4) {
+  margin-bottom: var(--space-s);
+}
+
+.card > :not(h2, h3, h4) {
+  font-size: var(--size-step-0);
+}
+
+.card > a {
+  align-self: start;
+}

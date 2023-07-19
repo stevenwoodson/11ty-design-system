@@ -1,0 +1,29 @@
+---
+title: Homepage
+layout: layouts/page.webc
+---
+
+<sidebar-l>
+  <nav>
+    <ul>
+      <li><a :href="url('/design-system')">Design System Example</a></li>
+      <li>
+        <a href="https://github.com/stevenwoodson/11ty-design-system">Github Source</a>
+      </li>
+    </ul>
+  </nav>
+  <div></div>
+  <div>
+    <stack-l>
+      <h1>11ty Design System</h1>
+      <p>
+        Hi there, this page is really only here to illustrate that the website itself can
+        be completely separate from the generated style guide. And that it can use the
+        same components that are stored and documented there.
+      </p>
+      <p>
+        <a :href="url('/design-system')">Here's where all the magic is happening!</a>
+      </p>
+    </stack-l>
+  </div>
+</sidebar-l>

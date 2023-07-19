@@ -1,0 +1,26 @@
+{%- set classNames = "card flow z-depth-1" -%}
+
+{%- if params.modifier -%}
+  {% set classNames = classNames + " card--" + params.modifier %}
+{% endif -%}
+
+{% switch params.option %}
+  {% case 'headline-first' %}
+    <div class="{{ classNames }}">
+      <h3>{{ params.headline }}</h3>
+      <img src='{{ params.image }}' alt=''>
+      <p>{{ params.content }}</p>
+    </div>
+  {% case 'photo-last' %}
+    <div class="{{ classNames }}">
+      <h3>{{ params.headline }}</h3>
+      <p>{{ params.content }}</p>
+      <img src='{{ params.image }}' alt=''>
+    </div>
+  {% default %}
+    <div class="{{ classNames }}">
+      <img src='{{ params.image }}' alt=''>
+      <h3>{{ params.headline }}</h3>
+      <p>{{ params.content }}</p>
+    </div>
+{% endswitch %}

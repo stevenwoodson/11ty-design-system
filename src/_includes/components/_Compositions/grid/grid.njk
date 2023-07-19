@@ -1,0 +1,13 @@
+{%- set classNames = "grid" -%}
+
+{%- if params.modifier -%}
+  {% set classNames = classNames + " grid--" + params.modifier %}
+{% endif -%}
+
+
+<div class="{{ classNames }}">
+  {% for card in params.cards %}
+    {% set params = card %}
+    {% include 'components/card/card.njk' %}
+  {% endfor %}
+</div>

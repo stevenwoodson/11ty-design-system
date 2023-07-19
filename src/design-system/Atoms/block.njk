@@ -1,0 +1,231 @@
+---
+title: Block
+layout: layouts/ds-static.webc
+date: 2023-07-01
+---
+
+<h1>Heading Level 1</h1>
+<h2>Heading Level 2</h2>
+<h3>Heading Level 3</h3>
+<h4>Heading Level 4</h4>
+<h5>Heading Level 5</h5>
+<h6>Heading Level 6</h6>
+
+<h1>Heading Level 1 that is very long to simulate wrapping</h1>
+<h2>Heading Level 2 that is very long to simulate wrapping</h2>
+<h3>Heading Level 3 that is very long to simulate wrapping to a second line</h3>
+<h4>Heading Level 4 that is very long to simulate wrapping to a second line </h4>
+<h5>Heading Level 5 that is very long to simulate wrapping to a second line therefore illustrating the line height</h5>
+<h6>Heading Level 6 that is very long to simulate wrapping to a second line therefore illustrating the line height</h6>
+
+
+<hr class="ds-hr">
+<h3>Paragraphs</h3>
+<p>
+  A paragraph (from the Greek paragraphos, “to write beside” or “written
+  beside”) is a self-contained unit of a discourse in writing dealing with a
+  particular point or idea. A paragraph consists of
+  <a href="#">one or more sentences</a>. Though not required by the syntax of
+  any language, paragraphs are usually an expected part of formal writing, used
+  to organize longer prose.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos,
+  aspernatur <mark>recusandae enim quae doloremque</mark>, natus iste nemo
+  placeat quod neque quibusdam soluta ipsa dolor quo aperiam officiis totam
+  quaerat iusto?
+</p>
+<blockquote>
+  <strong>A Blockquote</strong> Lorem ipsum dolor sit amet consectetur,
+  adipisicing elit. <a href="#">Quisquam suscipit</a>
+  ipsa placeat rerum cupiditate perspiciatis in id iste magni ex nostrum
+  aspernatur non doloribus similique eos ipsam, consectetur, saepe tempora sit,
+  dignissimos veniam.
+</blockquote>
+
+
+<hr class="ds-hr">
+<h3>Depth utilities</h3>
+<div class="flow wrapper wrapper--vertical-padding z-depth-1">
+  <p>
+    A paragraph (from the Greek paragraphos, “to write beside” or “written
+    beside”) is a self-contained unit of a discourse in writing dealing with a
+    particular point or idea. A paragraph consists of
+    <a href="#">one or more sentences</a>. Though not required by the syntax of
+    any language, paragraphs are usually an expected part of formal writing, used
+    to organize longer prose.
+  </p>
+</div>
+
+<div class="flow wrapper wrapper--vertical-padding z-depth-1-half">
+  <p>
+    A paragraph (from the Greek paragraphos, “to write beside” or “written
+    beside”) is a self-contained unit of a discourse in writing dealing with a
+    particular point or idea. A paragraph consists of
+    <a href="#">one or more sentences</a>. Though not required by the syntax of
+    any language, paragraphs are usually an expected part of formal writing, used
+    to organize longer prose.
+  </p>
+</div>
+
+<div class="flow wrapper wrapper--vertical-padding z-depth-2">
+  <p>
+    A paragraph (from the Greek paragraphos, “to write beside” or “written
+    beside”) is a self-contained unit of a discourse in writing dealing with a
+    particular point or idea. A paragraph consists of
+    <a href="#">one or more sentences</a>. Though not required by the syntax of
+    any language, paragraphs are usually an expected part of formal writing, used
+    to organize longer prose.
+  </p>
+</div>
+
+<div class="flow wrapper wrapper--vertical-padding z-depth-3">
+  <p>
+    A paragraph (from the Greek paragraphos, “to write beside” or “written
+    beside”) is a self-contained unit of a discourse in writing dealing with a
+    particular point or idea. A paragraph consists of
+    <a href="#">one or more sentences</a>. Though not required by the syntax of
+    any language, paragraphs are usually an expected part of formal writing, used
+    to organize longer prose.
+  </p>
+</div>
+
+
+<hr class="ds-hr">
+<h3>Standard Table</h3>
+<table>
+  <caption>
+    Table Caption
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Table Heading 1</th>
+      <th scope="col">Table Heading 2</th>
+      <th scope="col">Table Heading 3</th>
+      <th scope="col">Table Heading 4</th>
+      <th scope="col">Table Heading 5</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Table Footer 1</td>
+      <td>Table Footer 2</td>
+      <td>Table Footer 3</td>
+      <td>Table Footer 4</td>
+      <td>Table Footer 5</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Table Cell 1</td>
+      <td>Table Cell 2</td>
+      <td>Table Cell 3</td>
+      <td>Table Cell 4</td>
+      <td>Table Cell 5</td>
+    </tr>
+    <tr>
+      <td>Table Cell 1</td>
+      <td>Table Cell 2</td>
+      <td>Table Cell 3</td>
+      <td>Table Cell 4</td>
+      <td>Table Cell 5</td>
+    </tr>
+    <tr>
+      <td>Table Cell 1</td>
+      <td>Table Cell 2</td>
+      <td>Table Cell 3</td>
+      <td>Table Cell 4</td>
+      <td>Table Cell 5</td>
+    </tr>
+    <tr>
+      <td>Table Cell 1</td>
+      <td>Table Cell 2</td>
+      <td>Table Cell 3</td>
+      <td>Table Cell 4</td>
+      <td>Table Cell 5</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr class="ds-hr">
+<h3>Row-based Heading Table</h3>
+<table>
+  <caption>
+    Table Caption
+  </caption>
+  <tbody>
+    <tr>
+      <th scope="row">Table Heading 1
+      <td>Table Cell 1</td>
+      <td>Table Cell 1</td>
+      <td>Table Cell 1</td>
+    </tr>
+    <tr>
+      <th scope="row">Table Heading 2
+      <td>Table Cell 2</td>
+      <td>Table Cell 2</td>
+      <td>Table Cell 2</td>
+    </tr>
+    <tr>
+      <th scope="row">Table Heading 3
+      <td>Table Cell 3</td>
+      <td>Table Cell 3</td>
+      <td>Table Cell 3</td>
+    </tr>
+    <tr>
+      <th scope="row">Table Heading 4
+      <td>Table Cell 4</td>
+      <td>Table Cell 4</td>
+      <td>Table Cell 4</td>
+    </tr>
+    <tr>
+      <th scope="row">Table Heading 5
+      <td>Table Cell 5</td>
+      <td>Table Cell 5</td>
+      <td>Table Cell 5</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<hr class="ds-hr">
+<h3>Summary (accordion)</h3>
+<details>
+  <summary>Summary (accordion)</summary>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos,
+    aspernatur <mark>recusandae enim quae doloremque</mark>, natus iste nemo
+    placeat quod neque quibusdam soluta ipsa dolor quo aperiam officiis totam
+    quaerat iusto?
+  </p>
+</details>
+
+
+<hr class="ds-hr">
+<h3>Lists</h3>
+<p><strong>Definition list</strong></p>
+<dl>
+  <dt>Definition List Title</dt>
+  <dd>This is a definition list division.</dd>
+</dl>
+
+<p><strong>Ordered List</strong></p>
+<ol>
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+</ol>
+
+<p><strong>Unordered List</strong></p>
+<ul>
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+</ul>
+
+<p><strong>Bare List</strong></p>
+<ul class="list--bare">
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+</ul>

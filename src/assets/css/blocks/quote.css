@@ -1,0 +1,42 @@
+.quote {
+  border: 0;
+  border-radius: var(--border-radius);
+  max-width: 50ch;
+  position: relative;
+
+  &:before,
+  &:after {
+    color: var(--color-primary-light);
+    font-family: var(--font-serif);
+    font-size: var(--size-step-4);
+    line-height: 1;
+    position: absolute;
+  }
+
+  &:before {
+    content: '“';
+    left: 0;
+    top: 0;
+  }
+
+  &:after {
+    content: '”';
+    bottom: 0;
+    right: 0;
+  }
+
+  cite {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: var(--size-step-n1);
+    font-weight: bold;
+    line-height: 1.4;
+    margin-top: var(--space-xs);
+    padding: 0 var(--space-s);
+    text-align: center;
+  }
+
+  &__content {
+    padding: var(--space-s) var(--space-m);
+  }
+}

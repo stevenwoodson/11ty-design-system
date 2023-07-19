@@ -1,0 +1,74 @@
+---
+title: Design Tokens
+layout: layouts/ds-static.webc
+date: 2023-01-01
+---
+
+<h2>{{ designTokens.colors.title }}</h2>
+<p>{{ designTokens.colors.description }}</p>
+
+<ul class="ds-colors">
+{%- for color in designTokens.colors.items %}
+  <li class="ds-swatch flow" style="background-color: var(--color-{{ color.name | slugify }})">
+    <h3>{{ color.name }}</h3>
+    <code>var(--color-{{ color.name | slugify }})</code>
+  </li>
+{%- endfor %}
+</ul>
+
+
+<h2>{{ designTokens.fonts.title }}</h2>
+<p>{{ designTokens.fonts.description }}</p>
+
+<ul class="ds-fonts flow">
+{%- for font in designTokens.fonts.items %}
+  <li class="ds-font">
+    <h3>{{ font.name }}</h3>
+    <p>{{ font.description }}</p>
+    <p>{{ font.value }}</p>
+    <code>var(--font-{{ font.name | slugify }})</code>
+  </li>
+{%- endfor %}
+</ul>
+
+
+<h2>{{ designTokens.spacing.title }}</h2>
+<p>{{ designTokens.spacing.description }}</p>
+
+<table class="ds-spacing flow">
+{%- for space in designTokens.spacing.items %}
+  <tr>
+    <th scope="row"><h3>{{ space.name }}</h3></th>
+    <td>
+      <span class="flow">
+        <p>{{ space.min }}px to {{ space.max }}px</p>
+        <code>var(--space-{{ space.name | slugify }})</code>
+      </span>
+    </td>
+    <td>
+      <div class="ds-space" style="height:var(--space-{{ space.name | slugify }}); width:var(--space-{{ space.name | slugify }});"></div>
+    </td>
+  </tr>
+{%- endfor %}
+</table>
+
+<h2>{{ designTokens.sizes.title }}</h2>
+<p>{{ designTokens.sizes.description }}</p>
+
+
+<table class="ds-sizes flow">
+{%- for size in designTokens.sizes.items %}
+  <tr>
+    <th scope="row"><h3>{{ size.name }}</h3></th>
+    <td>
+      <span class="flow">
+        <p>{{ size.min }}px to {{ size.max }}px</p>
+        <code>var(--size-{{ size.name | slugify }})</code>
+      </span>
+    </td>
+    <td class="ds-sizes-example">
+      <p style="font-size:var(--size-{{ size.name | slugify }})">{{ size.name }}</p>
+    </td>
+  </tr>
+{%- endfor %}
+</table>

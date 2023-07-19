@@ -1,0 +1,20 @@
+@import 'tailwindcss/base';
+
+@import 'vendor/normalize.css';
+@import 'global/reset.css';
+
+@import 'tailwindcss/components';
+
+@import 'global/global-styles.css';
+@import 'global/block.css';
+@import 'global/button.css';
+@import 'global/form.css';
+@import 'global/table.css';
+
+@import 'vendor/prism-theme.css';
+
+@import-glob 'blocks/*.css';
+@import-glob 'compositions/*.css';
+@import-glob 'utilities/*.css';
+
+@import 'tailwindcss/utilities';

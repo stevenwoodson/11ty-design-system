@@ -1,0 +1,196 @@
+.btn,
+a.btn {
+  align-items: center;
+  background: var(--color-secondary);
+  background: linear-gradient(
+    to right,
+    var(--color-secondary-dark),
+    var(--color-secondary-dark) 34%,
+    var(--color-secondary) 66%
+  );
+  background-position: 100%;
+  background-size: 300% 100%;
+  border: 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: var(--color-bg);
+  display: inline-flex;
+  font-family: var(--font-base);
+  font-size: var(--size-step-0);
+  height: auto;
+  line-height: 1.15;
+  overflow: hidden;
+  padding: var(--space-xs) var(--space-s);
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: var(--transition-base);
+  vertical-align: middle;
+
+  & > .badge {
+    margin-left: 6px;
+  }
+
+  &:disabled,
+  &.disabled {
+    background: var(--color-grey-x-light);
+    color: var(--color-grey-dark);
+    box-shadow: none;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-position: 0 200%;
+    color: var(--color-bg);
+  }
+
+  &[target='_blank'] {
+    padding-right: 3em;
+
+    &:before {
+      font-size: 1.444em;
+      right: 0.6em;
+      top: 0;
+    }
+  }
+
+  &--flat {
+    background: linear-gradient(
+      to right,
+      var(--color-bg),
+      var(--color-bg) 34%,
+      var(--color-bg-alt) 66%
+    );
+    background-position: 100%;
+    background-size: 300% 100%;
+    border: 0;
+    box-shadow: none;
+    color: var(--color-secondary);
+    text-decoration: none; /* text decorations are clipped in WebKit browsers */
+
+    &:disabled,
+    &.disabled {
+      color: var(--color-grey-dark);
+      -webkit-text-fill-color: inherit;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--color-secondary-dark);
+    }
+  }
+
+  &--full-width {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &--secondary {
+    background: linear-gradient(
+      to right,
+      var(--color-bg-alt),
+      var(--color-bg-alt) 34%,
+      var(--color-bg) 66%
+    );
+    background-position: 100%;
+    background-size: 300% 100%;
+    border: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
+    padding: 12px 24px;
+    position: relative;
+
+    &:disabled,
+    &.disabled {
+      border-color: var(--color-grey-light);
+      color: var(--color-grey-dark);
+      -webkit-text-fill-color: inherit;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--color-secondary-dark);
+    }
+  }
+
+  &--large {
+    font-size: var(--size-step-1);
+    padding: var(--space-s) var(--space-m);
+  }
+
+  &--small {
+    font-size: var(--size-step-n1);
+    padding: var(--space-2xs) var(--space-xs);
+  }
+
+  &,
+  &--small,
+  &--large {
+    box-shadow: none;
+    margin-bottom: 5px;
+  }
+
+  /* Action Buttons - intended to be smaller with an icon, meant for CRUD tables
+     ========================================================================== */
+  &--action {
+    line-height: 1;
+    padding: 5px 8px;
+    padding-right: 34px;
+
+    & > .fe {
+      background: var(--color-secondary);
+      color: var(--color-bg);
+      font-size: 16px;
+      line-height: 1;
+      padding: 4px 4px 4px 7px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  /* Button Colors
+     ========================================================================== */
+  &--error {
+    border-color: var(--color-alert);
+    color: var(--color-alert);
+
+    & > .fe {
+      background-color: var(--color-alert);
+    }
+  }
+
+  &--info {
+    border-color: var(--color-info);
+    color: var(--color-info);
+
+    & > .fe {
+      background-color: var(--color-info);
+    }
+  }
+
+  &--success {
+    border-color: var(--color-success);
+    color: var(--color-success);
+
+    &:hover,
+    &:focus {
+      color: var(--color-success);
+    }
+
+    & > .fe {
+      background-color: var(--color-success);
+    }
+  }
+
+  &--warning {
+    border-color: var(--color-warning);
+    color: var(--color-warning);
+
+    & > .fe {
+      background-color: var(--color-warning);
+    }
+  }
+}

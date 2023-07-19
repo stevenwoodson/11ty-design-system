@@ -1,0 +1,56 @@
+<script webc:setup>
+  let metaTitle;
+  let currentUrl = $data.site.url + $data.page.url;
+  let metaDesc = summary;
+
+  if (title) {
+    // If the current page has a title, put it before the site name
+    metaTitle = `${title} — ${$data.site.name}`;
+  } else {
+    // If the current page has no title, just put the site name
+    metaTitle = $data.site.name;
+  }
+</script>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title @html="metaTitle"></title>
+    <link rel="canonical" :href="currentUrl" />
+
+    <meta property="og:site_name" :content="$data.site.name" />
+    <meta property="og:title" :content="metaTitle" />
+    <meta property="og:type" :content="website" />
+    <meta property="og:url" :content="currentUrl" />
+
+    <template webc:if="socialImage" webc:nokeep>
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="og:image" :content="socialImage" />
+      <meta name="twitter:image" :content="socialImage" />
+      <meta property="og:image:alt" :content="`Page image for ${site.name}`" />
+      <meta name="twitter:image:alt" :content="`Page image for ${site.name}`" />
+    </template>
+
+    <template webc:if="metaDesc" webc:nokeep>
+      <meta name="description" :content="metaDesc" />
+      <meta name="twitter:description" :content="metaDesc" />
+      <meta property="og:description" :content="metaDesc" />
+    </template>
+
+    <link
+      rel="stylesheet"
+      webc:keep
+      :href="url(`/assets/css/global.css?${global.random()}`)"
+    />
+    <link rel="stylesheet" webc:keep :href="getBundleFileUrl('css')" />
+    <slot name="head"></slot>
+  </head>
+  <body>
+    <x @raw="content" webc:nokeep></x>
+
+    <script webc:keep :src="getBundleFileUrl('js')" type="module"></script>
+  </body>
+</html>

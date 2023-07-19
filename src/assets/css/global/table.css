@@ -1,0 +1,59 @@
+table {
+  border-collapse: collapse;
+}
+table tfoot tr td,
+table tr th {
+  font-weight: 400;
+  font-size: 0.8em;
+  line-height: 1.5;
+  padding: var(--space-xs);
+  text-align: left;
+}
+
+table tfoot tr td {
+  border-top: 3px solid var(--color-grey-light);
+}
+
+table tr th {
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+table thead tr th {
+  border-bottom: 3px solid var(--color-primary);
+  vertical-align: bottom;
+}
+
+table tr th[scope='row'] {
+  border-right: 3px solid var(--color-primary);
+}
+
+table tbody tr {
+  & th[scope='row'],
+  & td {
+    border-bottom: 1px solid var(--color-grey-x-light);
+    padding: var(--space-xs);
+
+    & > * {
+      &:first-child {
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  & th[scope='row'] {
+    text-align: right;
+  }
+
+  &:last-of-type {
+    & th[scope='row'],
+    & td {
+      border-bottom: none;
+    }
+  }
+}

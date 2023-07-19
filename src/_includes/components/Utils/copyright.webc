@@ -1,0 +1,6 @@
+<script webc:type="js">
+  // Example of a dynamic footer copyright thanks to https://11ty.webc.fun/recipes/generating-dynamic-data/
+  const now = new Date();
+
+  `&copy; ${now.getFullYear()} <a href="https://stevenwoodson.com/">Steve Woodson</a>.`;
+</script>

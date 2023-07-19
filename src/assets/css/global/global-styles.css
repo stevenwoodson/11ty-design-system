@@ -1,0 +1,167 @@
+/*
+  Global styles
+
+  Low-specificity, global styles that apply to the whole
+  project: https://cube.fyi/css.html
+*/
+
+/* Global variables */
+:root {
+  --gutter: var(--space-s-m);
+  --border-radius: clamp(0.4rem, calc(0.4rem + 0.01vw), 0.41rem);
+
+  --outline-size: max(3px, 0.08em);
+  --outline-style: solid;
+  --outline-color: var(--color-focus);
+
+  --transition-base: 250ms ease;
+  --transition-movement: 200ms linear;
+  --transition-fade: 200ms ease;
+  --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+  --tracking: -0.05ch;
+  --tracking-s: -0.075ch;
+}
+
+body {
+  color: var(--color-dark);
+  background: var(--color-light);
+  font-size: var(--size-step-0);
+  font-family: var(--font-base);
+  line-height: 1.4;
+  letter-spacing: var(--tracking);
+}
+
+footer {
+  font-size: var(--size-step-n1);
+  align-items: center;
+}
+
+/* Base typesetting
+   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  letter-spacing: var(--tracking-s);
+}
+
+h1 {
+  font-size: var(--size-step-4);
+}
+
+h2 {
+  font-size: var(--size-step-3);
+}
+
+h3 {
+  font-size: var(--size-step-2);
+}
+
+h4 {
+  font-size: var(--size-step-1);
+}
+
+h5 {
+  font-size: var(--size-step-0);
+}
+
+h6 {
+  font-size: var(--size-step-0);
+}
+
+/* Set line lengths */
+p,
+li,
+blockquote:not([class]) {
+  max-width: 50ch;
+}
+
+h1,
+h2 {
+  max-width: 20ch;
+}
+
+h3,
+h4 {
+  max-width: 35ch;
+}
+
+h5,
+h6 {
+  max-width: 50ch;
+}
+
+/* More generic elements
+   ========================================================================== */
+svg {
+  height: 2ex;
+  width: auto;
+  flex: none;
+}
+
+[role='list'] {
+  padding: 0;
+}
+
+/* Base interactive elements */
+
+a {
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--color-secondary-dark);
+  text-decoration-thickness: from-font;
+}
+
+/* Focus Styles
+   ========================================================================== */
+
+/* Base :focus styles for fallback purposes */
+:is(a, button, input, select, textarea, summary):focus,
+[type='checkbox']:focus + span:after,
+[type='radio']:focus + span:after {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+/* Final :focus-visible styles */
+:is(a, button, input, select, textarea):focus-visible,
+[type='checkbox']:focus-visible + span:after,
+[type='radio']:focus-visible + span:after {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+:target {
+  scroll-margin-top: 2ex;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* Base selection styles that invert whatever colors are rendered */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-bg-alt);
+}
+
+/* Print styles
+   ========================================================================== */
+@media print {
+  a[target='_blank'] {
+    &:before {
+      content: '';
+    }
+  }
+
+  header nav[role='navigation'],
+  .print-hidden {
+    display: none !important;
+  }
+}

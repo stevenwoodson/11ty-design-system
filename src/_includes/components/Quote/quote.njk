@@ -1,0 +1,9 @@
+<blockquote class="quote">
+  <div class="quote__content">
+    {{ params.body | safe }}
+  </div>
+
+  {% if params.citation %}
+    <cite>{{ params.citation }}</cite>
+  {% endif %}
+</blockquote>

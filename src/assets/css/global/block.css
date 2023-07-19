@@ -1,0 +1,92 @@
+blockquote:not([class]) {
+  background: var(--color-bg-alt);
+  border-left: 8px solid var(--color-primary-light);
+  border-radius: var(--border-radius);
+  font-family: var(--font-serif);
+  font-size: var(--size-step-1);
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--space-s) var(--space-m);
+  position: relative;
+}
+
+/* Markdown blockquote:not([class])s aren't ideal, so we're presuming the person quoted is the last p */
+blockquote:not([class]) p:last-of-type {
+  font-family: var(--font-base);
+  font-size: var(--size-step-1);
+  font-weight: normal;
+}
+
+code,
+code[class*='language-'] {
+  background-color: var(--color-bg-alt);
+  background: repeating-linear-gradient(
+    var(--color-text),
+    var(--color-text) 2px,
+    #121 3px,
+    #131 4px
+  );
+  border-radius: var(--border-radius);
+  color: var(--color-code);
+  font-family: var(--font-code);
+  overflow: auto;
+  padding: 3px var(--space-xs);
+  position: relative;
+  text-shadow: none;
+
+  pre &,
+  &.block {
+    display: block;
+    line-height: 1.3;
+    white-space: pre;
+  }
+}
+
+code,
+kbd,
+samp {
+  font-size: 0.85em;
+}
+
+pre[data-language] {
+  position: relative;
+
+  &:after {
+    content: attr(data-language);
+    color: var(--color-bg);
+    font-family: var(--font-base);
+    font-size: 14px;
+    padding: 2px 8px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    top: 0;
+  }
+}
+
+dl {
+  dt {
+    font-weight: 500;
+  }
+  dd {
+    margin-left: rhythm-desktop-margin(0, 0.5);
+
+    ul {
+      padding-left: rhythm-desktop-margin(0, 0.5);
+    }
+  }
+}
+
+hr {
+  border: solid var(--color-grey);
+  border-width: 4px 0 0 0;
+  margin: -4px 0 0 0;
+
+  &.deemphasized {
+    border-color: var(--color-grey-light);
+  }
+}
+
+pre {
+  overflow: auto;
+}

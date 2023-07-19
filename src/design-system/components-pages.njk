@@ -1,0 +1,41 @@
+---
+pagination:
+  data: components.components
+  size: 1
+  alias: component
+permalink: "design-system/components/{{ component.slug }}/"
+layout: layouts/ds-wrapper.webc
+---
+{%- macro c(path, name, params) -%}
+  {% include "components/" + path + "/" + name + ".njk" ignore missing %}
+{%- endmacro -%}
+
+<seven-minute-tabs class="ds-stretch">
+  <ol role="tablist" class="ds-tabs" aria-label="What does this tab chooser do?">
+    <li><a class="ds-link" href="#example-tab" role="tab">Demo</a></li>
+    <li><a class="ds-link" href="#code-tab" role="tab">HTML</a></li>
+    <li><a class="ds-link" href="#context-tab" role="tab">Context</a></li>
+    <li><a class="ds-link" href="/design-system/components/full/{{ component.slug }}">Full Screen ↗</a></li>
+  </ol>
+
+  <div id="example-tab" role="tabpanel" class="ds-stretch">
+    <div class="ds-frame ds-stretch">
+      <iframe class="ds-stretch" src="/design-system/components/full/{{ component.slug }}" sandbox="allow-same-origin allow-scripts allow-forms allow-modals" style="" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes"></iframe>
+    </div>
+  </div>
+
+  <div id="code-tab" role="tabpanel" class="ds-code ds-stretch">
+    {% highlight "html" %}
+      {%- prettify -%}
+        {% set params = component.context %}
+        {% include "components/" + component.path + "/" + component.name + ".njk" ignore missing %}
+      {%- endprettify -%}
+  {% endhighlight %}
+  </div>
+
+  <div id="context-tab" role="tabpanel" class="ds-code ds-stretch">
+    {% highlight "js" %}
+      {% brace %} c("{{ component.path }}", "{{ component.name }}", {{ component.context | console | safe }}) {% endbrace %}
+    {% endhighlight %}
+  </div>
+</seven-minute-tabs>

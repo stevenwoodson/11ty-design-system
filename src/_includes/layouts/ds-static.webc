@@ -1,0 +1,5 @@
+---
+layout: layouts/ds-wrapper.webc
+---
+
+<div class="flow wrapper" @raw="content"></div>

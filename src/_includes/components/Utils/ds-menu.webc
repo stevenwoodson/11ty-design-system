@@ -1,0 +1,40 @@
+<ul role="list">
+  <li webc:for="(parentKey, parentItem) in dataItems">
+    <a
+      class="ds-link"
+      webc:if="parentItem.url"
+      :href="url(parentItem.url)"
+      @html="parentItem.title"
+    ></a>
+    <div webc:else><strong @html="parentItem.title"></strong></div>
+
+    <!--- Forced to do this repeatedly until recursion is resolved in https://github.com/11ty/webc/issues/184 --->
+    <!--- <div webc:if="parentItem.children.length > 0">
+      <ds-menu :@data-items="parentItem.children"></ds-menu>
+    </div> --->
+
+    <ul role="list" webc:if="parentItem.children.length > 0">
+      <li webc:for="(childKey, childItem) in parentItem.children">
+        <a
+          class="ds-link"
+          webc:if="childItem.url"
+          :href="url(childItem.url)"
+          @html="childItem.title"
+        ></a>
+        <div webc:else><strong @html="childItem.title"></strong></div>
+
+        <ul role="list" webc:if="childItem.children.length > 0">
+          <li webc:for="(grandchildKey, grandchildItem) in childItem.children">
+            <a
+              class="ds-link"
+              webc:if="grandchildItem.url"
+              :href="url(grandchildItem.url)"
+              @html="grandchildItem.title"
+            ></a>
+            <div webc:else><strong @html="grandchildItem.title"></strong></div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
