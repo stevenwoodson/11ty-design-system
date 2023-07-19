@@ -1,0 +1,36 @@
+stack-l {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+stack-l > * {
+  margin-block: 0;
+}
+
+stack-l > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+sidebar-l {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter, var(--space-s-l));
+}
+
+sidebar-l > :first-child {
+  flex-basis: var(--sidebar-target-width, 20rem);
+  flex-grow: 1;
+}
+
+sidebar-l > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: var(--sidebar-content-min-width, 50%);
+}
+
+/*
+A flipped version where the sidebar is on the right
+*/
+sidebar-l[data-direction='rtl'] {
+  flex-direction: row-reverse;
+}

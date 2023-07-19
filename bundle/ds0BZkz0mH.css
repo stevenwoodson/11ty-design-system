@@ -1,0 +1,13 @@
+stack-l {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+stack-l > * {
+  margin-block: 0;
+}
+
+stack-l > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}

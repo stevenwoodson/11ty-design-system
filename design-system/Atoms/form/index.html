@@ -1,0 +1,455 @@
+
+
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Eleventy Design System</title>
+    <link rel="canonical" href="https://stevenwoodson.com/design-system/components/full/card/">
+
+    <meta property="og:site_name" content="Eleventy Design System">
+    <meta property="og:title" content="Eleventy Design System">
+    <meta property="og:type">
+    <meta property="og:url" content="https://stevenwoodson.com/design-system/components/full/card/">
+
+    
+
+    
+
+    <link rel="stylesheet" href="/11ty-design-system/assets/css/global.css?79c8-a61b-e041">
+    <link rel="stylesheet" href="">
+    
+  
+  
+    
+  <script type="module" src="/11ty-design-system/assets/js/vendor/seven-minute-tabs.js?8e44-c016-14af" async></script>
+  <link rel="stylesheet" href="/11ty-design-system/assets/css/design-system.css?82ec-8663-d0bb">
+
+
+<div class="ds">
+  <div class="ds__body">
+    <nav class="ds__sidebar ds-flow--xs">
+      <h1 class="ds-title">
+        <a href="/11ty-design-system/design-system/">11ty Design System</a>
+      </h1>
+
+      <ul role="list">
+        <li>
+          <strong>Atoms</strong>
+          <ul role="list">
+            <li>
+              <a href="/11ty-design-system/design-system/Atoms/tokens/" class="ds-link">Design Tokens</a>
+            </li>
+<li>
+              <a href="/11ty-design-system/design-system/Atoms/block/" class="ds-link">Block</a>
+            </li>
+<li>
+              <a href="/11ty-design-system/design-system/Atoms/form/" class="ds-link">Form</a>
+            </li>
+<li>
+              <a href="/11ty-design-system/design-system/Atoms/inline/" class="ds-link">Inline</a>
+            </li>
+<li>
+              <a href="/11ty-design-system/design-system/Atoms/preformatted/" class="ds-link">Preformatted</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul role="list">
+  <li>
+    
+    <div><strong>_Compositions</strong></div>
+
+    
+    
+
+    <ul role="list">
+      <li>
+        <a href="/11ty-design-system/design-system/components/_Compositions/grid/" class="ds-link">Grid</a>
+        
+
+        
+      </li>
+<li>
+        <a href="/11ty-design-system/design-system/components/_Compositions/sidebar/" class="ds-link">Sidebar</a>
+        
+
+        
+      </li>
+<li>
+        <a href="/11ty-design-system/design-system/components/_Compositions/stack/" class="ds-link">Stack</a>
+        
+
+        
+      </li>
+    </ul>
+  </li>
+<li>
+    <a href="/11ty-design-system/design-system/components/card/" class="ds-link">Card</a>
+    
+
+    
+    
+
+    <ul role="list">
+      <li>
+        <a href="/11ty-design-system/design-system/components/card/headline-first/" class="ds-link">Card - Headline First</a>
+        
+
+        
+      </li>
+<li>
+        <a href="/11ty-design-system/design-system/components/card/photo-last/" class="ds-link">Card - Photo Last</a>
+        
+
+        
+      </li>
+    </ul>
+  </li>
+<li>
+    <a href="/11ty-design-system/design-system/components/quote/" class="ds-link">Quote</a>
+    
+
+    
+    
+
+    
+  </li>
+</ul>
+
+    </nav>
+
+    <main class="ds__main ds-stretch"><div class="flow wrapper">
+<label for="input__text"
+  >Text Input
+  <input id="input__text" type="text" placeholder="Text Input" />
+</label>
+
+<label for="input__text-required"
+  >Required Text Input
+  <input id="input__text-required" type="text" placeholder="Text Input" required />
+</label>
+
+<label for="input__password"
+  >Password
+  <input
+    id="input__password"
+    type="password"
+    placeholder="Type your Password"
+  />
+</label>
+
+<label for="input__webaddress"
+  >Web Address
+  <input id="input__webaddress" type="url" placeholder="http://yoursite.com" />
+</label>
+
+<label for="input__emailaddress"
+  >Email Address
+  <input id="input__emailaddress" type="email" placeholder="name@email.com" />
+</label>
+
+<label for="input__phone"
+  >Phone Number
+  <input id="input__phone" type="tel" placeholder="(999) 999-9999" />
+</label>
+
+<label for="input__search"
+  >Search
+  <input id="input__search" type="search" placeholder="Enter Search Term" />
+</label>
+
+<label for="input__text2"
+  >Number Input
+  <input id="input__text2" type="number" placeholder="Enter a Number" />
+</label>
+
+<label class="error">
+  E-Mail Address<span aria-hidden="true">*</span>
+  <input
+    id="email"
+    type="email"
+    name="email"
+    value="hey this ain't no email!"
+    required="required"
+    autocomplete="email"
+    aria-invalid="true"
+    aria-describedby="emailError"
+  />
+  <small id="emailError"
+    >These credentials do not match our records.</small
+  >
+</label>
+
+<label for="input__text4" class="valid"
+  >Valid
+  <input id="input__text4" type="text" placeholder="Text Input" />
+</label>
+
+<div>
+  <label for="textarea"
+    >Textarea
+    <textarea
+      id="textarea"
+      rows="8"
+      cols="48"
+      placeholder="Enter your message here"
+    ></textarea
+  ></label>
+</div>
+<div class="input-field">
+  <label
+    >Select Example
+    <select id="select">
+      <option>Option One</option>
+      <option>Option Two</option>
+      <option>Option Three</option>
+    </select>
+  </label>
+</div>
+
+<div class="input-field">
+  <label
+    >Select Example Required
+    <select id="select" required>
+      <option>Option One</option>
+      <option>Option Two</option>
+      <option>Option Three</option>
+    </select>
+  </label>
+</div>
+
+<fieldset>
+  <legend>Radio example</legend>
+  <ul class="list" role="list">
+    <li>
+      <label for="radio1"
+        ><input id="radio1" name="radio" type="radio" checked="checked" />
+        <span>Option 1</span></label
+      >
+    </li>
+    <li>
+      <label for="radio2"
+        ><input id="radio2" name="radio" type="radio" />
+        <span>Option 2</span></label
+      >
+    </li>
+    <li>
+      <label for="radio3"
+        ><input id="radio3" name="radio" type="radio" />
+        <span>Option 3</span></label
+      >
+    </li>
+    <li>
+      <label for="radio4"
+        ><input id="radio4" name="radio" type="radio" disabled />
+        <span>Disabled Choice</span></label
+      >
+    </li>
+    <li>
+      <label for="radio5"
+        ><input
+          id="radio5"
+          name="radio"
+          type="radio"
+          checked="checked"
+        />
+        <span>Selected Choice</span></label
+      >
+    </li>
+  </ul>
+</fieldset>
+
+<fieldset>
+  <legend>Checkbox example</legend>
+  <ul class="list" role="list">
+    <li>
+      <label
+        ><input
+          id="checkbox1"
+          name="checkbox"
+          type="checkbox"
+          checked="checked"
+        />
+        <span>Choice A</span></label
+      >
+    </li>
+    <li>
+      <label
+        ><input id="checkbox2" name="checkbox" type="checkbox" />
+        <span>Choice B</span></label
+      >
+    </li>
+    <li>
+      <label
+        ><input id="checkbox3" name="checkbox" type="checkbox" />
+        <span>Choice C</span></label
+      >
+    </li>
+    <li>
+      <label
+        ><input id="checkbox4" name="checkbox" type="checkbox" disabled />
+        <span>Disabled Choice</span></label
+      >
+    </li>
+    <li>
+      <label
+        ><input
+          id="checkbox5"
+          name="checkbox"
+          type="checkbox"
+          checked="checked"
+          disabled
+        />
+        <span>Disabled Checked</span></label
+      >
+    </li>
+  </ul>
+</fieldset>
+
+<p>
+  <label for="ic">Color input</label>
+  <input type="color" id="ic" value="#000000" />
+</p>
+<p>
+  <label for="in">Number input</label>
+  <input type="number" id="in" min="0" max="10" value="5" />
+</p>
+<p>
+  <label for="ir">Range input</label>
+  <input type="range" id="ir" value="10" />
+</p>
+<p>
+  <label for="idd">Date input</label>
+  <input type="date" id="idd" value="1970-01-01" />
+</p>
+<p>
+  <label for="idm">Month input</label>
+  <input type="month" id="idm" value="1970-01" />
+</p>
+<p>
+  <label for="idw">Week input</label>
+  <input type="week" id="idw" value="1970-W01" />
+</p>
+<p>
+  <label for="idt">Datetime input</label>
+  <input type="datetime" id="idt" value="1970-01-01T00:00:00Z" />
+</p>
+<p>
+  <label for="idtl">Datetime-local input</label>
+  <input type="datetime-local" id="idtl" value="1970-01-01T00:00" />
+</p>
+
+<hr class="ds-hr">
+<h3>Primary Buttons</h3>
+<p>
+  <button class="btn">button - class .btn</button>
+  <button class="btn">button - class .btn <span aria-hidden="true" class="fe fe-plus-circle"></span></button>
+  <button class="btn" disabled>button disabled - class .btn</button>
+  <a href="#" class="btn">link - class .btn</a>
+  <a href="#" class="btn">link - class .btn <span aria-hidden="true" class="fe fe-plus-circle"></span></a>
+</p>
+
+<hr class="ds-hr">
+<h3 class="global-margin-bottom">Secondary (<code>btn & btn--secondary</code> class)</h3>
+<p>
+  <button class="btn btn--secondary">button - class .btn</button>
+  <button class="btn btn--secondary">button - class .btn <span aria-hidden="true"
+      class="fe fe-plus-circle"></span></button>
+  <button class="btn btn--secondary" disabled>
+    button disabled - class .btn
+  </button>
+  <a href="#" class="btn btn--secondary">link - class .btn</a>
+  <a href="#" class="btn btn--secondary">link - class .btn <span aria-hidden="true"
+      class="fe fe-plus-circle"></span></a>
+</p>
+
+<hr class="ds-hr">
+<h3 class="global-margin-bottom">Large (<code>btn & btn--large</code> class)</h3>
+<p>
+  <button class="btn btn--large">
+    button - class .btn btn--large
+  </button>
+  <button class="btn btn--large">
+    button - class .btn btn--large <span aria-hidden="true" class="fe fe-plus-circle"></span>
+  </button>
+  <button class="btn btn--large" disabled>
+    button disabled - class .btn btn--large
+  </button>
+  <a href="#" class="btn btn--large">link - class .btn btn--large</a>
+  <a href="#" class="btn btn--large">link - class .btn btn--large <span aria-hidden="true"
+      class="fe fe-plus-circle"></span></a>
+</p>
+
+<hr class="ds-hr">
+<h3 class="global-margin-bottom">Small (<code>btn & btn--small</code> class)</h3>
+<p>
+  <button class="btn btn--small">
+    button - class .btn btn--small
+  </button>
+  <button class="btn btn--small">
+    button - class .btn btn--small <span aria-hidden="true" class="fe fe-plus-circle"></span>
+  </button>
+  <button class="btn btn--small" disabled>
+    button disabled - class .btn btn--small
+  </button>
+  <a href="#" class="btn btn--small">link - class .btn btn--small</a>
+  <a href="#" class="btn btn--small">link - class .btn btn--small <span aria-hidden="true"
+      class="fe fe-plus-circle"></span></a>
+</p>
+
+<hr class="ds-hr">
+<h3 class="global-margin-bottom">Elements with the <code>btn & btn--flat</code> class</h3>
+<p>
+  <button class="btn btn--flat">
+    button - class .btn btn--flat
+  </button>
+  <button class="btn btn--flat">
+    button - class .btn btn--flat <span aria-hidden="true" class="fe fe-plus-circle"></span>
+  </button>
+  <button class="btn btn--flat" disabled>
+    button disabled - class .btn btn--flat
+  </button>
+  <a href="#" class="btn btn--flat">link - class .btn btn--flat</a>
+  <a href="#" class="btn btn--flat">link - class .btn btn--flat <span aria-hidden="true"
+      class="fe fe-plus-circle"></span></a>
+</p>
+
+<hr class="ds-hr">
+<h3 class="global-margin-bottom">Elements with the <code>btn & btn--full-width-mobile</code> class</h3>
+<p>
+  <button class="btn btn--full-width-mobile">
+    button - class .btn btn--full-width-mobile
+  </button>
+  <button class="btn btn--full-width-mobile">
+    button - class .btn btn--full-width-mobile <span aria-hidden="true" class="fe fe-plus-circle"></span>
+  </button>
+  <a href="#" class="btn btn--full-width-mobile">link - class .btn btn--full-width-mobile</a>
+  <a href="#" class="btn btn--full-width-mobile">link - class .btn btn--full-width-mobile <span aria-hidden="true"
+      class="fe fe-plus-circle"></span></a>
+</p>
+
+<hr class="ds-hr">
+<h3 class="global-margin-bottom">Elements with the <code>btn btn--small btn--secondary & btn--action</code> class</h3>
+<p>
+  <button class="btn btn--small btn--secondary btn--info">View</button>
+  <button class="btn btn--small btn--secondary btn--success">Edit</button>
+  <button class="btn btn--small btn--secondary btn--warning">Archive</button>
+  <button class="btn btn--small btn--secondary btn--error">Delete</button>
+  <a href="#" class="btn btn--small btn--secondary btn--info">View</a>
+  <a href="#" class="btn btn--small btn--secondary btn--success">Edit</a>
+  <a href="#" class="btn btn--small btn--secondary btn--warning">Archive</a>
+  <a href="#" class="btn btn--small btn--secondary btn--error">Delete</a>
+</p>
+</div>
+</main>
+  </div>
+</div>
+
+
+    <script src="" type="module"></script>
+  
+
