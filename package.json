@@ -10,7 +10,7 @@
   "scripts": {
     "build": "env NODE_ENV=production npx eleventy --pathprefix '11ty-design-system'",
     "css": "npx postcss src/assets/css/*.css --base src --dir dist",
-    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+    "debug": "DEBUG=Eleventy* npx eleventy",
     "start": "concurrently 'npm run serve' 'npm run css -- --watch'",
     "serve": "npx eleventy --serve",
     "production": "NODE_ENV=production npx eleventy && NODE_ENV=production npm run css",

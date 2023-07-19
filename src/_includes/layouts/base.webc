@@ -1,16 +1,3 @@
-<script webc:setup>
-  let metaTitle;
-  let currentUrl = $data.site.url + $data.page.url;
-  let metaDesc = summary;
-
-  if (title) {
-    // If the current page has a title, put it before the site name
-    metaTitle = `${title} — ${$data.site.name}`;
-  } else {
-    // If the current page has no title, just put the site name
-    metaTitle = $data.site.name;
-  }
-</script>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -19,12 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <title @html="metaTitle"></title>
-    <link rel="canonical" :href="currentUrl" />
+    <link rel="canonical" :href="$data.site.url + $data.page.url" />
 
     <meta property="og:site_name" :content="$data.site.name" />
-    <meta property="og:title" :content="metaTitle" />
+    <meta
+      webc:if="title"
+      property="og:title"
+      :content="`${title} — ${$data.site.name}`"
+    />
+    <meta webc:else property="og:title" :content="$data.site.name" />
+    <div webc:if="true">This will render</div>
+    <div webc:if="false">This will not render</div>
     <meta property="og:type" :content="website" />
-    <meta property="og:url" :content="currentUrl" />
+    <meta property="og:url" :content="$data.site.url + $data.page.url" />
 
     <template webc:if="socialImage" webc:nokeep>
       <meta name="twitter:card" content="summary_large_image" />
@@ -34,10 +28,10 @@
       <meta name="twitter:image:alt" :content="`Page image for ${site.name}`" />
     </template>
 
-    <template webc:if="metaDesc" webc:nokeep>
-      <meta name="description" :content="metaDesc" />
-      <meta name="twitter:description" :content="metaDesc" />
-      <meta property="og:description" :content="metaDesc" />
+    <template webc:if="summary" webc:nokeep>
+      <meta name="description" :content="summary" />
+      <meta name="twitter:description" :content="summary" />
+      <meta property="og:description" :content="summary" />
     </template>
 
     <link
