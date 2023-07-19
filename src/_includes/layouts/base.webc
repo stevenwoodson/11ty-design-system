@@ -15,8 +15,6 @@
       :content="`${title} — ${$data.site.name}`"
     />
     <meta webc:else property="og:title" :content="$data.site.name" />
-    <div webc:if="true">This will render</div>
-    <div webc:if="false">This will not render</div>
     <meta property="og:type" :content="website" />
     <meta property="og:url" :content="$data.site.url + $data.page.url" />
 
