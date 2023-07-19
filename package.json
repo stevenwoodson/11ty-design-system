@@ -8,7 +8,7 @@
     "url": "git://github.com/stevenwoodson/11ty-design-system.git"
   },
   "scripts": {
-    "build": "env NODE_ENV=production npx eleventy --pathprefix '11ty-design-system'",
+    "build": "env NODE_ENV=production concurrently 'npx eleventy' 'npm run css'",
     "css": "npx postcss src/assets/css/*.css --base src --dir dist",
     "debug": "DEBUG=Eleventy* npx eleventy",
     "start": "concurrently 'npm run serve' 'npm run css -- --watch'",

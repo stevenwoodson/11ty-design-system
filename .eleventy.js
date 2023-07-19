@@ -43,10 +43,16 @@ module.exports = (config) => {
     return collectionApi.getFilteredByGlob('**/design-system/Atoms/**/*');
   });
 
+  let pathPrefix = '/';
+  if (process.env.NODE_ENV == 'production') {
+    pathPrefix = '/11ty-design-system/';
+  }
+
   return {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
+    pathPrefix: pathPrefix,
     dir: {
       input: 'src',
       output: 'dist'

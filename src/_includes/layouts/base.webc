@@ -39,12 +39,12 @@
       webc:keep
       :href="url(`/assets/css/global.css?${global.random()}`)"
     />
-    <link rel="stylesheet" webc:keep :href="getBundleFileUrl('css')" />
+    <link rel="stylesheet" webc:keep :href="url(getBundleFileUrl('css'))" />
     <slot name="head"></slot>
   </head>
   <body>
     <x @raw="content" webc:nokeep></x>
 
-    <script webc:keep :src="getBundleFileUrl('js')" type="module"></script>
+    <script webc:keep :src="url(getBundleFileUrl('js'))" type="module"></script>
   </body>
 </html>
