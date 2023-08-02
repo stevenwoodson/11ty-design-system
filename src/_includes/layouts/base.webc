@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title @html="metaTitle"></title>
+    <title webc:if="title" @html="`${title} — ${$data.site.name}`"></title>
+    <title webc:else @html="$data.site.name"></title>
     <link rel="canonical" :href="$data.site.url + $data.page.url" />
 
     <meta property="og:site_name" :content="$data.site.name" />

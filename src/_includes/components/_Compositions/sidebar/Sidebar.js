@@ -32,6 +32,7 @@ export class Sidebar extends HTMLElement {
 
           [data-i="${this.i}"] > * {
             ${this.sideWidth ? `flex-basis: ${this.sideWidth};` : ''}
+            min-inline-size: auto;
           }
 
           [data-i="${this.i}"] > ${

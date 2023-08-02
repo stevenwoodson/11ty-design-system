@@ -15,6 +15,14 @@
       "value": "#1e1719"
     },
     {
+      "name": "Grey X-Dark",
+      "value": "#090808"
+    },
+    {
+      "name": "Grey Dark",
+      "value": "#3e3939"
+    },
+    {
       "name": "Grey",
       "value": "#746969"
     },
@@ -27,12 +35,8 @@
       "value": "#d7d2d2"
     },
     {
-      "name": "Grey Dark",
-      "value": "#3e3939"
-    },
-    {
-      "name": "Grey X-Dark",
-      "value": "#090808"
+      "name": "Primary Dark",
+      "value": "#0b2626"
     },
     {
       "name": "Primary",
@@ -43,8 +47,8 @@
       "value": "#2f9c9a"
     },
     {
-      "name": "Primary Dark",
-      "value": "#0b2626"
+      "name": "Secondary Dark",
+      "value": "#752b2b"
     },
     {
       "name": "Secondary",
@@ -53,10 +57,6 @@
     {
       "name": "Secondary Light",
       "value": "#ca6e6e"
-    },
-    {
-      "name": "Secondary Dark",
-      "value": "#752b2b"
     },
     {
       "name": "Alert",

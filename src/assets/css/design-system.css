@@ -138,6 +138,10 @@
     text-shadow: 0 0 4px var(--color-text), 0 0 8px var(--color-text),
       0 0 12px var(--color-text), 0 0 12px var(--color-text), 0 0 12px var(--color-text);
     width: 100%;
+
+    & * {
+      color: var(--color-bg-alt);
+    }
   }
 }
 

@@ -23,8 +23,8 @@
 }
 
 body {
-  color: var(--color-dark);
-  background: var(--color-light);
+  color: var(--color-text);
+  background: var(--color-bg);
   font-size: var(--size-step-0);
   font-family: var(--font-base);
   line-height: 1.4;
@@ -43,32 +43,46 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.headline1,
+.headline2,
+.headline3,
+.headline4,
+.headline5,
+.headline6 {
+  color: var(--color-primary);
+  font-family: var(--font-serif);
   line-height: 1;
   letter-spacing: var(--tracking-s);
 }
 
-h1 {
+h1,
+.headline1 {
   font-size: var(--size-step-4);
 }
 
-h2 {
+h2,
+.headline2 {
   font-size: var(--size-step-3);
 }
 
-h3 {
+h3,
+.headline3 {
   font-size: var(--size-step-2);
 }
 
-h4 {
+h4,
+.headline4 {
   font-size: var(--size-step-1);
 }
 
-h5 {
+h5,
+.headline5 {
   font-size: var(--size-step-0);
 }
 
-h6 {
+h6,
+.headline6 {
   font-size: var(--size-step-0);
 }
 
@@ -80,17 +94,23 @@ blockquote:not([class]) {
 }
 
 h1,
-h2 {
+h2,
+.headline1,
+.headline2 {
   max-width: 20ch;
 }
 
 h3,
-h4 {
+h4,
+.headline3,
+.headline4 {
   max-width: 35ch;
 }
 
 h5,
-h6 {
+h6,
+.headline5,
+.headline6 {
   max-width: 50ch;
 }
 

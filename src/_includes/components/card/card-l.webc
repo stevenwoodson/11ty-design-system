@@ -1,0 +1,7 @@
+<div class="card z-depth-1">
+  <slot name="image" webc:if="option == 'photo-first'"></slot>
+  <h3 @text="headline" webc:if="headline"></h3>
+  <slot name="image" webc:if="option != 'photo-first' && option != 'photo-last'"></slot>
+  <slot name="content"></slot>
+  <slot name="image" webc:if="option == 'photo-last'"></slot>
+</div>

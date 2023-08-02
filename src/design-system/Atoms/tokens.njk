@@ -7,7 +7,7 @@ date: 2023-01-01
 <h2>{{ designTokens.colors.title }}</h2>
 <p>{{ designTokens.colors.description }}</p>
 
-<ul class="ds-colors">
+<ul class="ds-colors" role="list">
 {%- for color in designTokens.colors.items %}
   <li class="ds-swatch flow" style="background-color: var(--color-{{ color.name | slugify }})">
     <h3>{{ color.name }}</h3>

@@ -7,7 +7,14 @@
 
 <div class="{{ classNames }}">
   {% for card in params.cards %}
-    {% set params = card %}
-    {% include 'components/card/card.njk' %}
+    {% renderTemplate "webc", card %}
+      <card-l :@headline="headline" :@option="option">
+        <img webc:if="image" slot="image"
+          :src="image"
+          alt=""
+        />
+        <p webc:if="content" slot="content" @raw="content"></p>
+      </card-l>
+      {% endrenderTemplate %}
   {% endfor %}
 </div>
