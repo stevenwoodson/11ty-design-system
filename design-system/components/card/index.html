@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title></title>
+    
+    <title>Eleventy Design System</title>
     <link rel="canonical" href="https://stevenwoodson.github.io/11ty-design-system/design-system/components/card/">
 
     <meta property="og:site_name" content="Eleventy Design System">
@@ -18,14 +19,14 @@
 
     
 
-    <link rel="stylesheet" href="/11ty-design-system/assets/css/global.css?5dd1-c72e-3149">
+    <link rel="stylesheet" href="/11ty-design-system/assets/css/global.css?58b5-2aac-d820">
     <link rel="stylesheet" href="/11ty-design-system">
     </head><body>
   
   
     
-  <script type="module" src="/11ty-design-system/assets/js/vendor/seven-minute-tabs.js?a164-02e9-3ec6" async></script>
-  <link rel="stylesheet" href="/11ty-design-system/assets/css/design-system.css?956d-1c7e-61a6">
+  <script type="module" src="/11ty-design-system/assets/js/vendor/seven-minute-tabs.js?c625-fcb9-6424" async></script>
+  <link rel="stylesheet" href="/11ty-design-system/assets/css/design-system.css?8c4b-adbe-7ee5">
 
 
 <div class="ds">
@@ -96,7 +97,25 @@
 
     <ul role="list">
       <li>
-        <a href="/11ty-design-system/design-system/components/card/headline-first/" class="ds-link">Card - Headline First</a>
+        <a href="/11ty-design-system/design-system/components/card/no-content/" class="ds-link">Card - No Content</a>
+        
+
+        
+      </li>
+<li>
+        <a href="/11ty-design-system/design-system/components/card/no-headline/" class="ds-link">Card - No Headline</a>
+        
+
+        
+      </li>
+<li>
+        <a href="/11ty-design-system/design-system/components/card/no-photo/" class="ds-link">Card - No Photo</a>
+        
+
+        
+      </li>
+<li>
+        <a href="/11ty-design-system/design-system/components/card/photo-first/" class="ds-link">Card - Photo First</a>
         
 
         
@@ -134,23 +153,44 @@
 
   <div id="example-tab" role="tabpanel" class="ds-stretch">
     <div class="ds-frame ds-stretch">
-      <iframe class="ds-stretch" src="/11ty-design-system/design-system/components/full/card" sandbox="allow-same-origin allow-scripts allow-forms allow-modals" style="" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes"></iframe>
+      <iframe class="ds-stretch" src="/11ty-design-system/design-system/components/full/card" title="Component Frame" sandbox="allow-same-origin allow-scripts allow-forms allow-modals" style="" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes"></iframe>
     </div>
   </div>
 
   <div id="code-tab" role="tabpanel" class="ds-code ds-stretch">
-    <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>card flow z-depth-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>https://images.unsplash.com/photo-1688494929970-433dd6cab0dc?crop=entropy<span class="token entity named-entity" title="&amp;">&amp;amp;</span>cs=tinysrgb<span class="token entity named-entity" title="&amp;">&amp;amp;</span>fit=max<span class="token entity named-entity" title="&amp;">&amp;amp;</span>fm=jpg<span class="token entity named-entity" title="&amp;">&amp;amp;</span>q=80<span class="token entity named-entity" title="&amp;">&amp;amp;</span>w=400<span class="token punctuation">'</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span><span class="token punctuation">'</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">></span></span>Photo First<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">></span></span>
+    <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>card z-depth-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">></span></span>Headline First<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://images.unsplash.com/photo-1688494929970-433dd6cab0dc?crop=entropy<span class="token entity named-entity" title="&amp;">&amp;amp;</span>cs=tinysrgb<span class="token entity named-entity" title="&amp;">&amp;amp;</span>fit=max<span class="token entity named-entity" title="&amp;">&amp;amp;</span>fm=jpg<span class="token entity named-entity" title="&amp;">&amp;amp;</span>q=80<span class="token entity named-entity" title="&amp;">&amp;amp;</span>w=400<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, esse nisi. Doloremque assumenda quas ullam ipsa ex quae, reiciendis voluptatum beatae officiis laudantium nesciunt qui rem perferendis eveniet sequi dignissimos.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
   </div>
 
   <div id="context-tab" role="tabpanel" class="ds-code ds-stretch">
     <pre class="language-js"><code class="language-js"><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token function">c</span><span class="token punctuation">(</span><span class="token string">"card"</span><span class="token punctuation">,</span> <span class="token string">"card"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-  <span class="token string-property property">"headline"</span><span class="token operator">:</span> <span class="token string">"Photo First"</span><span class="token punctuation">,</span>
+  <span class="token string-property property">"headline"</span><span class="token operator">:</span> <span class="token string">"Headline First"</span><span class="token punctuation">,</span>
   <span class="token string-property property">"content"</span><span class="token operator">:</span> <span class="token string">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, esse nisi. Doloremque assumenda quas ullam ipsa ex quae, reiciendis voluptatum beatae officiis laudantium nesciunt qui rem perferendis eveniet sequi dignissimos."</span><span class="token punctuation">,</span>
-  <span class="token string-property property">"image"</span><span class="token operator">:</span> <span class="token string">"https://images.unsplash.com/photo-1688494929970-433dd6cab0dc?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;q=80&amp;w=400"</span>
+  <span class="token string-property property">"image"</span><span class="token operator">:</span> <span class="token string">"https://images.unsplash.com/photo-1688494929970-433dd6cab0dc?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;q=80&amp;w=400"</span><span class="token punctuation">,</span>
+  <span class="token string-property property">"page"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">"url"</span><span class="token operator">:</span> <span class="token string">"/design-system/components/card/"</span><span class="token punctuation">,</span>
+    <span class="token string-property property">"outputPath"</span><span class="token operator">:</span> <span class="token string">"dist/design-system/components/card/index.html"</span><span class="token punctuation">,</span>
+    <span class="token string-property property">"date"</span><span class="token operator">:</span> <span class="token string">"2023-08-02T21:52:24.859Z"</span><span class="token punctuation">,</span>
+    <span class="token string-property property">"inputPath"</span><span class="token operator">:</span> <span class="token string">"./src/design-system/components-pages.njk"</span><span class="token punctuation">,</span>
+    <span class="token string-property property">"fileSlug"</span><span class="token operator">:</span> <span class="token string">"components-pages"</span><span class="token punctuation">,</span>
+    <span class="token string-property property">"filePathStem"</span><span class="token operator">:</span> <span class="token string">"/design-system/components-pages"</span><span class="token punctuation">,</span>
+    <span class="token string-property property">"outputFileExtension"</span><span class="token operator">:</span> <span class="token string">"html"</span><span class="token punctuation">,</span>
+    <span class="token string-property property">"templateSyntax"</span><span class="token operator">:</span> <span class="token string">"njk"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string-property property">"eleventy"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">"version"</span><span class="token operator">:</span> <span class="token string">"2.0.1"</span><span class="token punctuation">,</span>
+    <span class="token string-property property">"generator"</span><span class="token operator">:</span> <span class="token string">"Eleventy v2.0.1"</span><span class="token punctuation">,</span>
+    <span class="token string-property property">"env"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">"source"</span><span class="token operator">:</span> <span class="token string">"cli"</span><span class="token punctuation">,</span>
+      <span class="token string-property property">"runMode"</span><span class="token operator">:</span> <span class="token string">"build"</span><span class="token punctuation">,</span>
+      <span class="token string-property property">"config"</span><span class="token operator">:</span> <span class="token string">"/home/runner/work/11ty-design-system/11ty-design-system/.eleventy.js"</span><span class="token punctuation">,</span>
+      <span class="token string-property property">"root"</span><span class="token operator">:</span> <span class="token string">"/home/runner/work/11ty-design-system/11ty-design-system"</span><span class="token punctuation">,</span>
+      <span class="token string-property property">"isServerless"</span><span class="token operator">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>
   </div>
 </seven-minute-tabs>
