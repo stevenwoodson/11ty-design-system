@@ -1,0 +1,12 @@
+<div
+  aria-live="polite"
+  aria-atomic="true"
+  tabindex="-1"
+  :class="`alert alert--${type} z-depth-1`"
+  :id="id"
+>
+  <h2 class="alert__title headline3" @text="headline" webc:if="headline"></h2>
+  <div class="alert__content">
+    <slot></slot>
+  </div>
+</div>

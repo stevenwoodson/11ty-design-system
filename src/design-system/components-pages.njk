@@ -4,6 +4,8 @@ pagination:
   size: 1
   alias: component
 permalink: "design-system/components/{{ component.slug }}/"
+eleventyComputed:
+  title: "{{ component.title }}"
 layout: layouts/ds-wrapper.webc
 ---
 {%- macro c(path, name, params) -%}

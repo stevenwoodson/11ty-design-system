@@ -4,6 +4,8 @@ pagination:
     size: 1
     alias: component
 permalink: "design-system/components/full/{{ component.slug }}/"
+eleventyComputed:
+  title: "{{ component.title }} Full Page"
 layout: layouts/base.webc
 ---
 <link rel="stylesheet" href="{{ '/assets/css/design-system.css?' + global.random() | url }}" />

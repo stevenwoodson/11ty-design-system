@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Alert Component
+   ========================================================================== */
+.alert {
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  display: block;
+  margin: var(--space-s) 0;
+}
+
+.alert__title {
+  border-bottom: 1px solid transparent;
+  color: var(--color-bg);
+  margin-top: 0;
+  max-width: none;
+  padding: var(--space-2xs) var(--space-s);
+}
+
+.alert__content {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  padding: var(--space-s) var(--space-m);
+  position: relative;
+
+  ul {
+    margin: 0;
+    padding-left: var(--space-xs);
+  }
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Modifiers
+     ========================================================================== */
+.alert--error {
+  border-color: var(--color-alert);
+
+  & .alert__title {
+    background-color: var(--color-alert);
+    border-color: var(--color-alert);
+    margin-top: 0;
+  }
+}
+
+.alert--info {
+  border-color: var(--color-info);
+
+  .alert__title {
+    background-color: var(--color-info);
+    border-color: var(--color-info);
+    margin-top: 0;
+  }
+}
+
+.alert--success {
+  border-color: var(--color-success);
+
+  .alert__title {
+    background-color: var(--color-success);
+    border-color: var(--color-success);
+    margin-top: 0;
+  }
+}
+
+.alert--warning {
+  border-color: var(--color-warning);
+
+  .alert__title {
+    background-color: var(--color-warning);
+    border-color: var(--color-warning);
+    margin-top: 0;
+  }
+}

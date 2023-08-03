@@ -22,10 +22,10 @@ date: 2023-01-01
 
 <ul class="ds-fonts flow">
 {%- for font in designTokens.fonts.items %}
-  <li class="ds-font">
-    <h3>{{ font.name }}</h3>
+  <li class="ds-font" style="font-family: var(--font-{{ font.name | slugify }})">
+    <h3 style="font-family: var(--font-{{ font.name | slugify }})">{{ font.name }}</h3>
     <p>{{ font.description }}</p>
-    <p>{{ font.value }}</p>
+    <p><strong>Font Families</strong>: {{ font.value }}</p>
     <code>var(--font-{{ font.name | slugify }})</code>
   </li>
 {%- endfor %}
