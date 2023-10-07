@@ -39,7 +39,7 @@
     "concurrently": "^6.2.1",
     "cssnano": "^5.1.7",
     "html-prettify": "^1.0.7",
-    "postcss": "^8.4.8",
+    "postcss": "^8.4.31",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",
     "postcss-import-ext-glob": "^2.0.1",
